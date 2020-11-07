@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv=\"content-type\" content=\"application/vnd.ms-excel; charset=UTF-8\">
+        <link rel="stylesheet" href="/static/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/results.css">
+		     <script src="/static/jquery-2.0.3.min.js"></script>
+		<style>
+             .img-container2 {
+				max-width:100%;
+				max-height:100%;
+              }			  
+			  table {
+				margin-left:auto; 
+				margin-right:auto;
+				text-align: center;
+				}
+				tr {
+					text-align: center;
+
+				}
+				table thead th {text-align: center;}
+        </style>
+    </head>
+
+    <body>
+        <div class="container-fluid " style="background: white">
+			 <div class="wrapper" style="min-height:100vh;">
+			 <div class = "img-container2"> <img style='height: 100%; width: 100%; object-fit: contain' src="{{url_for('static', filename='banner.png')}}" /></div>
+
+            <div class="col-xs-8 col-xs-offset-2">
+                <h2 class="text-muted" color="blue" align="center">ỨNG DỤNG NHẬN DẠNG TIẾNG NÓI</h2>
+                <br></br>
+                <h3 class="text-muted" style="color:#069; margin: 20px;" align="center">KẾT QUẢ DỰ ĐOÁN</h3>				
+			   
+				<h3 class="text-muted" style="color:#069; margin: 20px;" align="center">{{data[0].output}}</h3>
+				
+			</div>
+				
+			<div  style="text-align:center; margin: 20px;"> 
+			<form action="/" method="GET" id="nameform" >
+				<button type="submit" form="nameform" value="Submit" class="btn btn-success" >Thử lại trường hợp khác</button>
+			</form>
+			</div>
+				
+			
+			</div>
+		</div>
+    </body>
+</html>

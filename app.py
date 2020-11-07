@@ -7,10 +7,6 @@ import os
 app = Flask(__name__)
 
 
-UPLOAD_FOLDER = 'uploads/'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-
 # Cái đoạn code sau đây các phương pháp rút trích đặc trưng
 def extract_feature(file_name, **kwargs):
     mfcc = kwargs.get("mfcc")
